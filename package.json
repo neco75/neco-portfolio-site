@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "start:log": "next start > app.log 2>&1 &"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.1.5",
