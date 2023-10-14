@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Providers } from "./providers";
-import Header from "../../components/header"
-import Footer from '../../components/footer';
+import Header from "./header"
+import Footer from './footer';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,13 +14,22 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <Providers>
-      <Header />
-      {children}
-      <Footer />
-    </Providers>
+    <html>
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="icon" href="/favicon.ico" />
+      </head>
+      <body>
+        <Providers>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </Providers>
+      </body>
+    </html>
   );
 }

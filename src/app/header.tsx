@@ -1,7 +1,7 @@
 import { Box, Flex, Link, Image, Text } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { FaHome, FaUser, FaCode, FaImages, FaBlog, FaEnvelope } from "react-icons/fa";
-import "../components/style/header.css";
+import "../../styles/header.css"
 
 const Header = () => {
     return (
