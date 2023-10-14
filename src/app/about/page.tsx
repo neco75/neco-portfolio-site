@@ -7,13 +7,13 @@ const AboutPage = () => {
                 About Me
             </Heading>
             <Text fontSize="lg" mb={4}>
-                Hi there! My name is [Your Name] and I'm a [Your Profession] based in [Your Location]. I have [Number of Years] years of experience in [Your Field] and I'm passionate about [Your Interests].
+                Hi there! My name is [Your Name] and I&apos;m a [Your Profession] based in [Your Location]. I have [Number of Years] years of experience in [Your Field] and I&apos;m passionate about [Your Interests].
             </Text>
             <Text fontSize="lg" mb={4}>
                 In my free time, I enjoy [Your Hobbies] and [Your Other Hobbies]. I also love to [Your Other Interests].
             </Text>
             <Text fontSize="lg" mb={4}>
-                If you'd like to get in touch, feel free to email me at [Your Email] or connect with me on [Your Social Media].
+                If you&apos;d like to get in touch, feel free to email me at [Your Email] or connect with me on [Your Social Media].
             </Text>
         </Box>
     );
