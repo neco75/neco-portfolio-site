@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google'
 import { Providers } from "./providers";
 import Header from "./header"
 import Footer from './footer';
+import PageChangeMotion from '@/components/motionWrapper/pageChangeMotion'
+import { Box, Heading, Text } from "@chakra-ui/react";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,8 +19,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html lang='ja'>
       <head>
+        <title>NECO Portfolio Site</title>
         <meta charSet="utf-8" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" href="/favicon.ico" />
@@ -26,7 +29,11 @@ export default function RootLayout({
       <body>
         <Providers>
           <Header />
-          <main>{children}</main>
+          <Box m={5}>
+            <PageChangeMotion>
+              <Box>{children}</Box>
+            </PageChangeMotion>
+          </Box>
           <Footer />
         </Providers>
       </body>

@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <Box as="footer" py={6} bg="gray.800" color="white">
+        <Box as="footer" py={6} mt={4} bg="gray.800" color="white">
             <Flex justify="center" align="center">
                 <Link href="https://github.com/your-github-username" isExternal mx={2}>
                     <FaGithub size={24} />

@@ -6,6 +6,7 @@ import {
     Button,
     FormControl,
     FormLabel,
+    Heading,
     HStack,
     Input,
     Textarea,
@@ -53,8 +54,11 @@ const ContactPage = () => {
     };
 
     return (
-        <Box>
+        <Box p={4}>
             <VStack spacing={8} align="stretch">
+            <Heading as="h1" size="xl" mb={4} textAlign="center">
+                Contact
+            </Heading>
                 <Box display="flex" justifyContent="center">
                     <form onSubmit={handleSubmit} style={{width: "70%"}}>
                         <VStack spacing={4} align="center">

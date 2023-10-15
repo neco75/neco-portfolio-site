@@ -49,7 +49,7 @@ const skills: Skill[] = [
 const SkillsPage: NextPage = () => {
     return (
         <Box p={4}>
-            <Heading as="h1" size="xl" mb={4}>
+            <Heading as="h1" size="xl" mb={4} textAlign="center">
                 Skills
             </Heading>
             <SimpleGrid columns={[1, 2, 3]} spacing={4}>

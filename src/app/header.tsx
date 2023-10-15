@@ -4,12 +4,12 @@ import "../../styles/header.css"
 
 const Header = () => {
     return (
-        <Box bg="gray.100" py={4}>
+        <Box bg="gray.100" py={4} mb={4}>
             <Flex maxW="12xl" mx="auto"  align="center">
                     <Link href="/" ml={4}>
-                        <Image src="https://pbs.twimg.com/profile_images/1625088585086148608/iiel8eHK_400x400.jpg" alt="Site Logo" boxSize={10} />
+                        <Image className="header-logo" src="https://pbs.twimg.com/profile_images/1625088585086148608/iiel8eHK_400x400.jpg" alt="Site Logo" boxSize={10} />
                     </Link>
-                <Flex as="nav" ml="auto" mr={4}>
+                <Flex className="header-nav" as="nav" ml="auto" mr={4}>
                         <Link href="/" mr={4}>
                             <Flex align="center">
                                 <Text fontWeight="bold" mr={2}><FaHome /></Text>

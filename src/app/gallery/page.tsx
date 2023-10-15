@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Image, Text } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Heading, Image, Text } from "@chakra-ui/react";
 import { NextPage } from "next";
 
 interface GalleryItem {
@@ -45,15 +45,21 @@ const galleryItems: GalleryItem[] = [
         title: "Item 6",
         description: "This is the sixth item in the gallery.",
     },
+    {
+        id: "7",
+        imageUrl: "https://via.placeholder.com/300x300",
+        title: "Item 6",
+        description: "This is the sixth item in the gallery.",
+    },
 ];
 
 const GalleryPage: NextPage = () => {
     return (
-        <Box>
-            <Text fontSize="3xl" fontWeight="bold" mb={8}>
+        <Box p={4}>
+            <Heading as="h1" size="xl" mb={4} textAlign="center">
                 Gallery
-            </Text>
-            <Grid templateColumns="repeat(3, 1fr)" gap={6}>
+            </Heading>
+            <Grid templateColumns="repeat(5, 1fr)" gap={6} justifyItems="center" alignItems="center">
                 {galleryItems.map((item) => (
                     <GridItem key={item.id}>
                         <Image src={item.imageUrl} alt={item.title} />
