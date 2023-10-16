@@ -4,12 +4,21 @@ import "../../styles/header.css"
 
 const Header = () => {
     return (
-        <Box bg="gray.100" py={4} mb={4}>
+        <Box bg="whiteAlpha.100" py={4} mb={4} position="sticky" top="0" zIndex="sticky">
             <Flex maxW="12xl" mx="auto"  align="center">
-                    <Link href="/" ml={4}>
-                        <Image className="header-logo" src="https://pbs.twimg.com/profile_images/1625088585086148608/iiel8eHK_400x400.jpg" alt="Site Logo" boxSize={10} />
+                    <Link className="header-logo" href="/" ml={7} display="flex" >
+                        <Text fontWeight="bold" fontSize="2xl">My Portfolio Site</Text>
+                        <Image
+                        src="/logo.jpg"
+                        alt="Site Logo"
+                        boxSize={10}
+                        style={{
+                            borderRadius: "50%",
+                            border: "2px solid #fff",
+                            marginLeft: "10px"
+                        }}/>
                     </Link>
-                <Flex className="header-nav" as="nav" ml="auto" mr={4}>
+                <Flex className="header-nav" as="nav" ml="auto" mr={7}>
                         <Link href="/" mr={4}>
                             <Flex align="center">
                                 <Text fontWeight="bold" mr={2}><FaHome /></Text>

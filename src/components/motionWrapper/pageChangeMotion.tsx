@@ -22,6 +22,7 @@ const PageChangeMotionWrapper = ({ children }: { children: React.ReactNode }) =>
           border:"0.5px solid",
           borderColor:"#a0aec0",
           borderRadius:"0.5rem",
+          overflow:"hidden",
           width: "100%" }}
       >
         {children}

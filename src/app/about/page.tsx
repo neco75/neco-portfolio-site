@@ -1,57 +1,65 @@
-import { Box, Heading, Text, Flex, Image } from "@chakra-ui/react";
+import { Box, Heading, Text, Flex, Image, Link } from "@chakra-ui/react";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const AboutPage = () => {
     return (
         <Box p={4}>
-                        <Heading as="h1" size="xl" mb={4} textAlign="center">
-                About
+            <Heading as="h1" size="xl" mb={4} textAlign="center">
+                About Me
             </Heading>
             <Flex direction="column" alignItems="center" mb={8}>
-                <Image src="https://pbs.twimg.com/profile_images/1625088585086148608/iiel8eHK_400x400.jpg" alt="[Your Name]" borderRadius="full" boxSize="150px" objectFit="cover" />
-                <Heading as="h1" size="xl" mt={4} mb={2} textAlign="center">
-                    [Your Name]
-                </Heading>
-                <Text fontSize="lg" mb={4}>
-                    [Your Age] years old, [Your Profession] based in [Your Location]
+                <Image src="/logo.jpg" alt="Profile Picture" borderRadius="full" boxSize="200px" objectFit="cover" />
+                <Text fontSize="3xl" mb={4} fontWeight="bold">
+                    相良 陸斗
                 </Text>
                 <Text fontSize="lg" mb={4}>
-                    HN: [Your HN]
+                    生年月日: 2003/09/30
                 </Text>
                 <Text fontSize="lg" mb={4}>
-                    [Your University], [Your Grade]
+                    所属: 会津大学 コンピュータ理工学科 学部2年
                 </Text>
                 <Text fontSize="lg" mb={4}>
-                    [Your Club or Organization]
+                    <Flex justifyContent="center">
+                        <Box mr={2}>
+                            <Link href="https://plise.co.jp" display="flex" alignItems="center" isExternal>
+                                <Text fontSize="lg" mr={2}>バイト: 株式会社PLISE</Text>
+                                <FaExternalLinkAlt />
+                            </Link>
+                        </Box>
+                    </Flex>
+                </Text>
+                <Text fontSize="lg" mb={4}>
+                    出身: 福島県 喜多方市
+                </Text>
+                <Text fontSize="lg" mb={4}>
+                    HN: neco / ocen
                 </Text>
             </Flex>
-            <Box mb={8}>
+            <Flex direction="column" alignItems="center" mb={8}>
                 <Heading as="h2" size="lg" mb={4}>
-                    About Me
+                    趣味と興味
                 </Heading>
                 <Text fontSize="lg" mb={4}>
-                    [Your Interests]
+                    趣味: 惰眠、食事、予定を決めない散歩・旅行、ノベルゲーム
                 </Text>
                 <Text fontSize="lg" mb={4}>
-                    [Your Hobbies]
+                    興味のある技術: フロントエンド開発 デザイン
                 </Text>
-                <Text fontSize="lg" mb={4}>
-                    [Your Other Hobbies]
-                </Text>
-                <Text fontSize="lg" mb={4}>
-                    [Your Other Interests]
-                </Text>
-                <Text fontSize="lg" mb={4}>
-                    [Your One-Liner]
-                </Text>
-            </Box>
-            <Box>
+            </Flex>
+            <Flex direction="column" alignItems="center" mb={8}>
                 <Heading as="h2" size="lg" mb={4}>
-                    About This Portfolio
+                    このサイトについて
                 </Heading>
-                <Text fontSize="lg" mb={4}>
-                    This portfolio was created using [Your Tools]. It showcases my [Your Skills] and [Your Achievements].
-                </Text>
-            </Box>
+                        <Text fontSize="lg" mb={2}><Text as="span" fontWeight="bold">使用言語</Text>:TypeScript</Text>
+                        <Text fontSize="lg" mb={2}><Text as="span" fontWeight="bold">フレームワーク</Text>:Next.js13</Text>
+                        <Text fontSize="lg" mb={2}><Text as="span" fontWeight="bold">レイアウト</Text>:ChakraUI</Text>
+                        <Text fontSize="lg" mb={2}><Text as="span" fontWeight="bold">ページ遷移ライブラリ</Text>:framer-motion</Text>
+                        <Text fontSize="lg" mb={2}><Text as="span" fontWeight="bold">ブログ作成</Text>:microCMS</Text>
+                        <Text fontSize="lg" mb={2}><Text as="span" fontWeight="bold">ホスティング</Text>:Netlify</Text>
+            </Flex>
+            <Text fontSize="lg" mb={4} textAlign="center">
+                まだまだ未熟な学生ですが、よろしくお願いします。
+            </Text>
         </Box>
     );
 };
