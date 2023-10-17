@@ -1,0 +1,9 @@
+.profile-details-text{
+    margin-inline: 0.5em;
+}
+
+@media (max-width: 768px) {
+    .profile-details{
+        flex-direction: column;
+    }
+}

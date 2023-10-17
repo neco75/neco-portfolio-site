@@ -9,11 +9,12 @@ import {
     Heading,
     HStack,
     Input,
+    Text,
     Textarea,
     useToast,
     VStack,
 } from "@chakra-ui/react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaTwitter} from "react-icons/fa";
 
 const ContactPage = () => {
     const [name, setName] = useState("");
@@ -69,7 +70,7 @@ const ContactPage = () => {
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
                                     width="100%"
-                                /> 
+                                />
                             </FormControl>
                             <FormControl id="email" isRequired>
                                 <FormLabel>Email</FormLabel>
@@ -98,33 +99,20 @@ const ContactPage = () => {
                             <Button
                                 leftIcon={<FaGithub />}
                                 as="a"
-                                href="https://github.com/yourusername"
+                                href="https://github.com/neco75?tab=repositories"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 width="100%"
                                 display="flex"
                                 justifyContent="center"
                                 alignItems="center"
-                            >
-                                GitHub
-                            </Button>
-                            <Button
-                                leftIcon={<FaLinkedin />}
-                                as="a"
-                                href="https://www.linkedin.com/in/yourusername"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                width="100%"
-                                display="flex"
-                                justifyContent="center"
-                                alignItems="center"
-                            >
-                                LinkedIn
+                                >
+                                <Text className="iconText">GitHub</Text>
                             </Button>
                             <Button
                                 leftIcon={<FaTwitter />}
                                 as="a"
-                                href="https://twitter.com/yourusername"
+                                href="https://twitter.com/ocen_UoA30C2"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 width="100%"
@@ -132,7 +120,7 @@ const ContactPage = () => {
                                 justifyContent="center"
                                 alignItems="center"
                             >
-                                Twitter
+                                <Text className="iconText">X(Twitter)</Text>
                             </Button>
                         </HStack>
                     </VStack>

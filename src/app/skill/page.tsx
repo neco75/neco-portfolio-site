@@ -10,39 +10,45 @@ export type Skill = {
 const skills: Skill[] = [
     {
         name: "HTML",
-        level: "Expert",
+        level: "☆☆★★★",
         description:
-            "I have been using HTML for over 5 years and have a deep understanding of its semantics and best practices.",
+            "ちょっと分かる",
     },
     {
         name: "CSS",
-        level: "Expert",
+        level: "☆☆★★★",
         description:
-            "I have been using CSS for over 5 years and have a deep understanding of its layout and styling capabilities.",
+            "ちょっと分かるかもしれない",
     },
     {
         name: "JavaScript",
-        level: "Expert",
+        level: "☆★★★★",
         description:
-            "I have been using JavaScript for over 5 years and have a deep understanding of its core concepts and modern frameworks.",
-    },
-    {
-        name: "React",
-        level: "Expert",
-        description:
-            "I have been using React for over 3 years and have built several complex applications with it.",
+            "理解したい",
     },
     {
         name: "TypeScript",
-        level: "Intermediate",
+        level: "☆★★★★",
         description:
-            "I have been using TypeScript for over 2 years and have a good understanding of its type system and benefits.",
+            "勉強中。エラーの原因分からなくてany使うレベル。間違いなくTypescriptの強みを使えてない",
     },
     {
         name: "Next.js",
-        level: "Intermediate",
+        level: "☆★★★★",
         description:
-            "I have been using Next.js for over 1 year and have built several server-side rendered applications with it.",
+            "勉強中。このサイト実装できるくらい",
+    },
+    {
+        name: "C言語",
+        level: "☆☆★★★",
+        description:
+            "授業で勉強。チュートリアル終了くらい",
+    },
+    {
+        name: "Java",
+        level: "☆★★★★",
+        description:
+            "バイト先で勉強中。ThymeleafやSpringFrameworkなども勉強してます",
     },
 ];
 
@@ -50,7 +56,7 @@ const SkillsPage: NextPage = () => {
     return (
         <Box p={4}>
             <Heading as="h1" size="xl" mb={4} textAlign="center">
-                Skills
+                Skill
             </Heading>
             <SimpleGrid columns={[1, 2, 3]} spacing={4}>
                 {skills.map((skill) => (

@@ -1,5 +1,6 @@
 import { Box, Heading, Text, Flex, Image, Link } from "@chakra-ui/react";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import "./_style.css"
 
 const AboutPage = () => {
     return (
@@ -16,7 +17,10 @@ const AboutPage = () => {
                     生年月日: 2003/09/30
                 </Text>
                 <Text fontSize="lg" mb={4}>
-                    所属: 会津大学 コンピュータ理工学科 学部2年
+                    所属: 会津大学 コンピュータ理工学科
+                </Text>
+                <Text fontSize="lg" mb={4}>
+                    学年: 学部2年
                 </Text>
                 <Text fontSize="lg" mb={4}>
                     <Flex justifyContent="center">
@@ -39,12 +43,20 @@ const AboutPage = () => {
                 <Heading as="h2" size="lg" mb={4}>
                     趣味と興味
                 </Heading>
-                <Text fontSize="lg" mb={4}>
-                    趣味: 惰眠、食事、予定を決めない散歩・旅行、ノベルゲーム
-                </Text>
-                <Text fontSize="lg" mb={4}>
-                    興味のある技術: フロントエンド開発 デザイン
-                </Text>
+                <Box textAlign="center">
+                    <Text className="profile-details" fontSize="lg" mb={4} display="flex">
+                        <Text as="span" fontWeight="bold">趣味</Text>
+                        <Text className="profile-details-text">惰眠</Text>
+                        <Text className="profile-details-text">食事</Text>
+                        <Text className="profile-details-text">予定を決めない散歩・旅行</Text>
+                        <Text className="profile-details-text">ノベルゲーム</Text>
+                    </Text>
+                    <Text className="profile-details" fontSize="lg" mb={4} display="flex">
+                        <Text as="span" fontWeight="bold">興味のある技術</Text>
+                        <Text className="profile-details-text">フロントエンド開発</Text>
+                        <Text className="profile-details-text">デザイン</Text>
+                    </Text>
+                </Box>
             </Flex>
             <Flex direction="column" alignItems="center" mb={8}>
                 <Heading as="h2" size="lg" mb={4}>
