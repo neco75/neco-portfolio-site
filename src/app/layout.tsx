@@ -4,7 +4,7 @@ import { Providers } from "./providers";
 import Header from "./header"
 import Footer from './footer';
 import PageChangeMotion from '@/components/motionWrapper/pageChangeMotion'
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 const inter = Inter({ subsets: ['latin'] })
 

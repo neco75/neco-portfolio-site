@@ -1,5 +1,16 @@
 import { Box, Heading, Text, Link, Flex, Image, Grid } from "@chakra-ui/react";
 import NextLink from "next/link";
+import {client} from "../../../libs/client"
+
+export const getStaticProps = async () => {
+    const data = await client.get({ endpoint: "blog" });
+  
+    return {
+      props: {
+        blog: data.contents,
+      },
+    };
+  };
 
 const BlogPage = () => {
     return (
