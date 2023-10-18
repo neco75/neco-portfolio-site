@@ -1,5 +1,5 @@
 export type Skill = {
-    name: string;
-    level: string;
-    description: string;
-  };
+  name: string;
+  level: string;
+  description: string;
+};
