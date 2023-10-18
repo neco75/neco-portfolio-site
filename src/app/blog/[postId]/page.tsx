@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import parse from "html-react-parser";
 import { getDetail, getList } from "../../../libs/client";
 import "../../../../styles/default_style_sheet.scss";
-import { Box, Heading, Text, Flex, Image, Grid, List, Link } from "@chakra-ui/react";
+import { Box, Heading, Text, Image } from "@chakra-ui/react";
 
 export async function generateStaticParams() {
  const { contents } = await getList();

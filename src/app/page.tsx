@@ -1,27 +1,9 @@
 'use client'
 
 import { Box, Heading, Image, Text } from "@chakra-ui/react";
-import { useState, useEffect } from "react";
-
-const images = [
-
-  "https://source.unsplash.com/random/1920x1080",
-  "https://source.unsplash.com/random/1920x1080",
-  "https://source.unsplash.com/random/1920x1080",
-];
+import { images, texts } from "./_script";
 
 export default function Home() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 5000);
-
-    return () => clearInterval(intervalId);
-  }, []);
 
   return (
     <Box
@@ -35,11 +17,11 @@ export default function Home() {
           My Portfolio Site
         </Heading>
         <Text fontSize="xl" color="white" textAlign="center">
-          このページって何書けばいいんですかね？
+          {texts[Math.floor(Math.random() * texts.length)]}
         </Text>
       </Box>
       <Image
-        src={images[currentImageIndex]}
+        src={images[0]}
         alt="Hero Image"
         objectFit="cover"
         w="100%"
