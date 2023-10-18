@@ -1,0 +1,6 @@
+    /* スマホサイズの時detail-box classの左右のpaddingを3にする */
+    @media screen and (max-width: 767px) {
+      .detail-box {
+        padding: 0 0;
+      }
+    }
