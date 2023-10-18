@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Heading, Image } from "@chakra-ui/react";
+import { Box, Heading, Image, Text } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 
 const images = [
@@ -34,6 +34,9 @@ export default function Home() {
         <Heading as="h1" size="4xl" color="white" textAlign="center" mb={4}>
           My Portfolio Site
         </Heading>
+        <Text fontSize="xl" color="white" textAlign="center">
+          このページって何書けばいいんですかね？
+        </Text>
       </Box>
       <Image
         src={images[currentImageIndex]}

@@ -22,7 +22,7 @@ export default function RootLayout({
         <title>NECO Portfolio Site</title>
         <meta charSet="utf-8" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="../../public/logo.jpg" />
       </head>
       <body>
         <Providers>
