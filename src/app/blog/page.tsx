@@ -1,16 +1,7 @@
 import { Box, Heading, Text, Link, Flex, Image, Grid } from "@chakra-ui/react";
 import NextLink from "next/link";
-import {client} from "../../../libs/client"
+import {getList} from "../../../libs/client"
 
-export const getStaticProps = async () => {
-    const data = await client.get({ endpoint: "blog" });
-  
-    return {
-      props: {
-        blog: data.contents,
-      },
-    };
-  };
 
 const BlogPage = () => {
     return (
@@ -78,8 +69,33 @@ const BlogPage = () => {
                 </Box>
             </Flex>
         </Box>
-        
     );
 };
 
 export default BlogPage;
+
+// export default async function StaticPage() {
+//     const { contents } = await getList();
+   
+//     // ページの生成された時間を取得
+//     const time = new Date().toLocaleString();
+   
+//     if (!contents || contents.length === 0) {
+//      return <h1>No contents</h1>;
+//     }
+   
+//     return (
+//      <div>
+//       <h1>{time}</h1>
+//       <ul>
+//        {contents.map((post) => {
+//         return (
+//          <li key={post.id}>
+//           <Link href={`/static/${post.id}`}>{post.title}</Link>
+//          </li>
+//         );
+//        })}
+//       </ul>
+//      </div>
+//     );
+//    }

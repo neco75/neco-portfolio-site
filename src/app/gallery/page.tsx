@@ -1,16 +1,6 @@
 import { Box, Flex, Grid, Heading, Image, Link, SimpleGrid, Text } from "@chakra-ui/react";
 import NextLink from "next/link";
-import {client} from "../../../libs/client"
-
-export const getStaticProps = async () => {
-    const data = await client.get({ endpoint: "gallery" });
-  
-    return {
-      props: {
-        blog: data.contents,
-      },
-    };
-  };
+import {getList} from "../../../libs/client"
 
 type GalleryItem = {
     image: string;
@@ -47,7 +37,6 @@ const galleryList: GalleryItem[] = [
 ];
 
 const GalleryPage = () => {
-    console.log(getStaticProps());
     return (
         <Flex>
             <Box p={4} mx="auto" display={{ base: "none", md: "flex" }}>
