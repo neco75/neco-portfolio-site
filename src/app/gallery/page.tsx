@@ -1,6 +1,6 @@
 import { Box, Flex, Grid, Heading, Image, Link, SimpleGrid, Text } from "@chakra-ui/react";
 import NextLink from "next/link";
-import {getList} from "../../../libs/client"
+import {getList} from "../../libs/client"
 
 type GalleryItem = {
     image: string;

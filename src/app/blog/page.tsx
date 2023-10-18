@@ -1,101 +1,46 @@
-import { Box, Heading, Text, Link, Flex, Image, Grid } from "@chakra-ui/react";
-import NextLink from "next/link";
-import {getList} from "../../../libs/client"
+import { Box, Heading, Text, Flex, Image, Grid, List, Link } from "@chakra-ui/react";
+import { getList } from "../../libs/client";
 
+export default async function StaticPage() {
+ const { contents } = await getList();
 
-const BlogPage = () => {
-    return (
-        <Box>
-            <Flex>
-                <Box mx="auto" p={4} display={{ base: "none", md: "flex" }}>
-                    <Box>
-                        <Heading as="h1" size="xl" mb={4} textAlign="center">
-                            Blog
-                        </Heading>
-                        <Grid templateColumns="repeat(4, 1fr)" gap={4}>
-                            {[1, 2, 3, 4, 5].map((postId) => (
-                                <Flex key={postId} direction="column">
-                                    <Link as={NextLink} href={`/blog/${postId}`}>
-                                        <Flex direction="column">
-                                            <Image
-                                                src="https://via.placeholder.com/350"
-                                                alt="blog thumbnail"
-                                                mb={4}
-                                            />
-                                            <Box>
-                                                <Heading as="h2" size="lg">
-                                                    Blog Post Title
-                                                </Heading>
-                                                <Text fontSize="md" color="gray.500">
-                                                    Created on: 2022-01-0{postId}
-                                                </Text>
-                                            </Box>
-                                        </Flex>
-                                    </Link>
-                                </Flex>
-                            ))}
-                        </Grid>
-                    </Box>
-                </Box>
-                <Box mx="auto" p={4} display={{ base: "block", md: "none" }}>
-                    <Box>
-                        <Heading as="h1" size="xl" mb={4} textAlign="center">
-                            Blog
-                        </Heading>
-                        <Grid templateColumns="repeat(2, 1fr)" gap={4}>
-                            {[1, 2, 3, 4, 5].map((postId) => (
-                                <Flex key={postId} direction="column">
-                                    <Link as={NextLink} href={`/blog/${postId}`}>
-                                        <Flex direction="column">
-                                            <Image
-                                                src="https://via.placeholder.com/350"
-                                                alt="blog thumbnail"
-                                                mb={4}
-                                            />
-                                            <Box>
-                                                <Heading as="h2" size="lg">
-                                                    Blog Post Title
-                                                </Heading>
-                                                <Text fontSize="md" color="gray.500">
-                                                    Created on: 2022-01-0{postId}
-                                                </Text>
-                                            </Box>
-                                        </Flex>
-                                    </Link>
-                                </Flex>
-                            ))}
-                        </Grid>
-                    </Box>
-                </Box>
-            </Flex>
-        </Box>
-    );
-};
+ if (!contents || contents.length === 0) {
+    return <h1>No contents</h1>;
+ }
 
-export default BlogPage;
-
-// export default async function StaticPage() {
-//     const { contents } = await getList();
-   
-//     // ページの生成された時間を取得
-//     const time = new Date().toLocaleString();
-   
-//     if (!contents || contents.length === 0) {
-//      return <h1>No contents</h1>;
-//     }
-   
-//     return (
-//      <div>
-//       <h1>{time}</h1>
-//       <ul>
-//        {contents.map((post) => {
-//         return (
-//          <li key={post.id}>
-//           <Link href={`/static/${post.id}`}>{post.title}</Link>
-//          </li>
-//         );
-//        })}
-//       </ul>
-//      </div>
-//     );
-//    }
+ return (
+    <Box>
+        <Heading as="h1" size="xl" mb={4} textAlign="center">
+                Blog
+        </Heading>
+     <Grid templateColumns="repeat(4, 1fr)" gap={4}>
+        {contents.map((post) => {
+         return (
+            <Box key={post.id} p={4} bg="white" borderRadius="md" boxShadow="md">
+                <Link href={`/blog/${post.id}`}>
+                    <Flex direction="column">
+                        <Image
+                            src={post.eyecatch?.url}
+                            alt="blog thumbnail"
+                            mb={4}
+                        />
+                        <Box>
+                            <Heading as="h2" size="lg">
+                                {post.title}
+                            </Heading>
+                            <Text>
+                                {post.title}
+                            </Text>
+                            <Text fontSize="md" color="gray.500">
+                                Created on: {post.createdAt}
+                            </Text>
+                        </Box>
+                    </Flex>
+                </Link>
+            </Box>
+         );
+        })}
+     </Grid>
+    </Box>
+ );
+}
