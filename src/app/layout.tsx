@@ -1,12 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import { Providers } from "./providers";
 import Header from "./header"
 import Footer from './footer';
 import PageChangeMotion from '@/components/motionWrapper/pageChangeMotion'
 import { Box } from "@chakra-ui/react";
 
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
