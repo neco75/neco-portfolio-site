@@ -42,7 +42,7 @@ const GalleryPage = () => {
                                 left="0"
                                 width="100%"
                                 height="100%"
-                                bg="rgba(0, 0, 0, 0.5)"
+                                bg="rgba(0, 0, 0, 0.8)"
                                 zIndex="9999"
                                 onClick={() => setShowModal(false)}
                               >
