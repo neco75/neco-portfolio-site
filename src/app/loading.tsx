@@ -1,3 +1,5 @@
+'use client'
+
 import { Box, Spinner, Text } from "@chakra-ui/react";
 import { keyframes } from "@emotion/react";
 
