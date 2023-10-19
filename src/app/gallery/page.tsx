@@ -36,52 +36,51 @@ const GalleryPage = () => {
                 ))}
              </Box>
              {showModal && (
-        <Box
-          position="fixed"
-          top="0"
-          left="0"
-          width="100%"
-          height="100%"
-          bg="rgba(0, 0, 0, 0.5)"
-          zIndex="9999"
-          onClick={() => setShowModal(false)}
-        >
-          <Box
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            width="100%"
-            height="100%"
-          >
-            <Box
-              display="flex"
-              flexDirection="column"
-              alignItems="center"
-              p={4}
-              maxWidth="80%"
-            >
-              <Image
-                src={modalImage}
-                alt="modal image"
-                display="block"
-                margin="0 auto"
-                maxHeight="80vh"
-              />
-              <Box p={4} bg="rgba(0, 0, 0, 0.5)" color="white" width="100%">
-                <Heading as="h2" size="lg">
-                  {galleryList.find((item) => item.image === modalImage)?.title}
-                </Heading>
-                <Text fontSize="md" color="gray.500">
-                  Created on:{" "}
-                  {galleryList.find((item) => item.image === modalImage)?.createdOn}
-                </Text>
-              </Box>
-            </Box>
-          </Box>
-        </Box>
-      )}
-    </Box>
-  );
-};
-
-export default GalleryPage;
+                              <Box
+                                position="fixed"
+                                top="0"
+                                left="0"
+                                width="100%"
+                                height="100%"
+                                bg="rgba(0, 0, 0, 0.5)"
+                                zIndex="9999"
+                                onClick={() => setShowModal(false)}
+                              >
+                                <Box
+                                  display="flex"
+                                  justifyContent="center"
+                                  alignItems="center"
+                                  width="100%"
+                                  height="100%"
+                                >
+                                  <Box
+                                    display="flex"
+                                    flexDirection="column"
+                                    alignItems="center"
+                                    p={4}
+                                    maxWidth="80%"
+                                  >
+                                    <Image
+                                      src={modalImage}
+                                      alt="modal image"
+                                      display="block"
+                                      margin="0 auto"
+                                      maxHeight="80vh"
+                                    />
+                                    <Box p={4} bg="rgba(0, 0, 0, 0.5)" color="white" width="100%">
+                                      <Heading as="h2" size="lg">
+                                        {galleryList.find((item) => item.image === modalImage)?.title}
+                                      </Heading>
+                                      <Text fontSize="md" color="gray.500">
+                                        Created on:{" "}
+                                        {galleryList.find((item) => item.image === modalImage)?.createdOn}
+                                      </Text>
+                                    </Box>
+                                  </Box>
+                                </Box>
+                              </Box>
+                            )}
+                          </Box>
+                );
+              };
+              export default GalleryPage;
