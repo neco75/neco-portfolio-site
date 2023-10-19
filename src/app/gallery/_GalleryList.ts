@@ -43,7 +43,7 @@ const galleryList: GalleryItem[] = [
     },
     {
       image: "/gallery9.jpg",
-      title: "AizuHack2022 LineBot",
+      title: "AizuHack2023 Web",
       createdOn: "2023-10-20",
     },
     {
