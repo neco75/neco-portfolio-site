@@ -1,0 +1,24 @@
+.blog-card {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+  filter: brightness(100%);
+  &:hover {
+    transform: scale(1.05);
+    filter: brightness(105%);
+  }
+  &:not(:hover) {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+  animation: fadeIn 0.5s ease-in-out;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
