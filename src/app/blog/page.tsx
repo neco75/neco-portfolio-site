@@ -8,7 +8,6 @@ export default async function StaticPage() {
   if (!contents || contents.length === 0) {
     return <h1>No contents</h1>;
   }
-  console.log(contents);
   return (
     <Box p={4}>
       <Heading as="h1" size="xl" mb={4} textAlign="center">
