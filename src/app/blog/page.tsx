@@ -8,7 +8,7 @@ export default async function StaticPage() {
   if (!contents || contents.length === 0) {
     return <h1>No contents</h1>;
   }
-
+  console.log(contents);
   return (
     <Box p={4}>
       <Heading as="h1" size="xl" mb={4} textAlign="center">
@@ -56,6 +56,22 @@ export default async function StaticPage() {
                     </Heading>
                   </Box>
                 </Flex>
+                <Text
+                  className="blog-card-category"
+                  fontSize="md"
+                  color="gray.500"
+                  bg="gray.200"
+                  position="absolute"
+                  bottom={0}
+                  left={0}
+                  paddingInlineStart={2}
+                  paddingInlineEnd={2}
+                  m={2}
+                  border={"1px"}
+                  borderRadius="md"
+                >
+                  {post.category.name}
+                </Text>
                 <Text
                   className="blog-card-date"
                   fontSize="md"

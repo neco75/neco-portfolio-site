@@ -1,0 +1,5 @@
+@keyframes border-animation {
+  to {
+    transform: rotate(360deg);
+  }
+}

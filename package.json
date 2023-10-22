@@ -25,7 +25,8 @@
     "react-dom": "^18",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.11.0",
-    "sass": "^1.69.4"
+    "sass": "^1.69.4",
+    "zenn-content-css": "^0.1.148"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -9,10 +9,10 @@ import {
   Fade,
   Center,
   VStack,
+  Spinner,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { images, texts } from "./_script";
-import { Global, css } from "@emotion/react";
 import { Helmet } from "react-helmet";
 
 function useTypingAnimation(text: string, speed: number) {
@@ -39,21 +39,6 @@ export default function Home() {
   const { isOpen, onToggle } = useDisclosure();
   const [randomText, setRandomText] = useState("");
   const [randomImage, setRandomImage] = useState("");
-  const [gradient, setGradient] = useState(
-    "linear-gradient(to right, lightblue, blue)"
-  );
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setGradient((prev) =>
-        prev === "linear-gradient(to right, lightblue, blue)"
-          ? "linear-gradient(to right, blue, lightblue)"
-          : "linear-gradient(to right, lightblue, blue)"
-      );
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   useEffect(() => {
     setRandomText(texts[Math.floor(Math.random() * texts.length)]);
@@ -76,45 +61,13 @@ export default function Home() {
           content="portfolio, web development, programming"
         />
       </Helmet>
-      <Global
-        styles={css`
-          @keyframes gradient {
-            0% {
-              background-position: 0% 50%;
-            }
-            50% {
-              background-position: 100% 50%;
-            }
-            100% {
-              background-position: 0% 50%;
-            }
-          }
-        `}
-      />
       <Center
         position="absolute"
         top="50%"
         left="50%"
         transform="translate(-50%, -50%)"
       >
-        <VStack
-          style={{
-            background:
-              "linear-gradient(270deg, rgba(173,216,230,0.5), rgba(144,238,144,0.5))",
-            backgroundSize: "200% 200%",
-            animation: "gradient 5s ease infinite",
-          }}
-          p={10}
-          w="100vh"
-          h="100%"
-          borderRadius="md"
-          boxShadow="xl"
-          spacing={8}
-          _hover={{
-            opacity: "0.5",
-            transition: "all 10s",
-          }}
-        >
+        <VStack p={10} w="100vh" h="100%" spacing={8}>
           <Heading
             as="h1"
             size="4xl"
@@ -148,7 +101,7 @@ export default function Home() {
         top="0"
         left="0"
         zIndex="-1"
-        filter="blur(10px)"
+        filter="brightness(50%) blur(10px)"
       />
     </Box>
   );

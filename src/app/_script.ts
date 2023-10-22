@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-
 export const images = [
   "/gallery1.jpg",
   "/gallery2.jpg",
