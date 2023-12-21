@@ -32,35 +32,50 @@ export default async function StaticDetailPage({
     notFound();
   }
   return (
-    <Box
-      className="detail-box"
-      width="100%"
-      display="flex"
-      justifyContent="center"
-      padding="0 15%"
-      bgColor="#EEEEEE"
-    >
+    <>
       <Box
-        className="post-article"
-        p={5}
-        margin="0 auto"
+        className="detail-box"
         width="100%"
-        bgColor="white"
-        borderRadius="md"
-        boxShadow="lg"
+        display="flex"
+        justifyContent="center"
+        padding="0 15%"
+        bgColor="#EEEEEE"
       >
-        <Heading as="h1">{post.title}</Heading>
-        <Text as="h2" float="right">
-          記入日:{time}
-        </Text>
-        <Image
-          src={post.eyecatch?.url}
-          alt="blog thumbnail"
-          mb={4}
+        <Box
+          className="post-article"
+          p={5}
+          margin="0 auto"
           width="100%"
-        />
-        <Box className="znc">{parse(post.content)}</Box>
+          bgColor="white"
+          borderRadius="md"
+          boxShadow="lg"
+        >
+          <meta
+            property="og:url"
+            content={`https://neco-blog.netlify.app/${postId}`}
+          />
+          <meta property="og:title" content={post.title.toString()} />
+          <meta
+            property="og:description"
+            content={parse(post.content).toString()}
+          />
+          <meta
+            property="og:image"
+            content={post.eyecatch?.url.toString() || ""}
+          />
+          <Heading as="h1">{post.title.toString()}</Heading>
+          <Text as="h2" float="right">
+            記入日:{time}
+          </Text>
+          <Image
+            src={post.eyecatch?.url}
+            alt="blog thumbnail"
+            mb={4}
+            width="100%"
+          />
+          <Box className="znc">{parse(post.content)}</Box>
+        </Box>
       </Box>
-    </Box>
+    </>
   );
 }
