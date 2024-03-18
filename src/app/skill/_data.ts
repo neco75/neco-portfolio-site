@@ -23,7 +23,7 @@ export const skills: Skill[] = [
       name: "TypeScript",
       level: "☆★★★★",
       description:
-          "勉強中。エラーの原因分からなくてany使うレベル。間違いなくTypescriptの強みを使えてない",
+          "勉強中。Typescriptのありがたみ分かっていない",
   },
   {
       name: "Next.js",
@@ -35,12 +35,12 @@ export const skills: Skill[] = [
       name: "C言語",
       level: "☆☆★★★",
       description:
-          "授業で勉強。チュートリアル終了くらい",
+          "授業で勉強",
   },
   {
       name: "Java",
       level: "☆★★★★",
       description:
-          "バイト先で勉強中。ThymeleafやSpringFrameworkなども勉強してます",
+          "バイト先で勉強。ThymeleafやSpringFrameworkなども勉強",
   },
 ];

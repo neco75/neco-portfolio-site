@@ -60,6 +60,11 @@ const ContactPage = () => {
             <Heading as="h1" size="xl" mb={4} textAlign="center">
                 Contact
             </Heading>
+                <Box>
+                    <Text textAlign="center">
+                        現在機能していません。XアカウントからのDMをお願いします。
+                    </Text>
+                </Box>
                 <Box display="flex" justifyContent="center">
                     <form onSubmit={handleSubmit} style={{width: "70%"}}>
                         <VStack spacing={4} align="center">
