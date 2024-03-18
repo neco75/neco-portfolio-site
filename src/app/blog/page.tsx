@@ -21,7 +21,6 @@ export default async function StaticPage() {
           xl: "repeat(4, 1fr)",
         }}
         gap={4}
-        p={4}
       >
         {contents.map((post) => {
           return (
@@ -35,6 +34,8 @@ export default async function StaticPage() {
               position="relative"
               border={"1px"}
               borderColor={"gray.200"}
+              alignItems="center"
+              width="100%"
             >
               <Link href={`/blog/${post.id}`} textDecoration="none">
                 <Flex direction="column">
