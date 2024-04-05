@@ -210,6 +210,16 @@ const AboutPage = () => {
                 <Td>
                   <Text fontSize="lg" mb={2}>
                     <Text as="span" fontWeight="bold">
+                      メール転送
+                    </Text>
+                  </Text>
+                </Td>
+                <Td>SSGform</Td>
+              </Tr>
+              <Tr>
+                <Td>
+                  <Text fontSize="lg" mb={2}>
+                    <Text as="span" fontWeight="bold">
                       ホスティング
                     </Text>
                   </Text>
@@ -376,6 +386,16 @@ const AboutPage = () => {
                   </Text>
                 </Td>
                 <Td>microCMS</Td>
+              </Tr>
+              <Tr>
+                <Td>
+                  <Text fontSize="lg" mb={2}>
+                    <Text as="span" fontWeight="bold">
+                      メール転送
+                    </Text>
+                  </Text>
+                </Td>
+                <Td>SSGform</Td>
               </Tr>
               <Tr>
                 <Td>
