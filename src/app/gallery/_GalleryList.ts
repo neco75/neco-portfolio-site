@@ -63,16 +63,11 @@ const galleryList: GalleryItem[] = [
   },
   {
     image: "/gallery13.jpg",
-    title: "",
+    title: "試験日間違えて仙台で路頭に迷ってた時",
     createdOn: "",
   },
   {
     image: "/gallery14.jpg",
-    title: "",
-    createdOn: "",
-  },
-  {
-    image: "/gallery15.jpg",
     title: "",
     createdOn: "",
   },
@@ -98,6 +93,46 @@ const galleryList: GalleryItem[] = [
   },
   {
     image: "/gallery20.jpg",
+    title: "",
+    createdOn: "",
+  },
+  {
+    image: "/gallery21.jpg",
+    title: "",
+    createdOn: "",
+  },
+  {
+    image: "/gallery22.jpg",
+    title: "",
+    createdOn: "",
+  },
+  {
+    image: "/gallery24.jpg",
+    title: "実家 年末",
+    createdOn: "",
+  },
+  {
+    image: "/gallery25.jpg",
+    title: "",
+    createdOn: "",
+  },
+  {
+    image: "/gallery26.jpg",
+    title: "初のグラボ分解",
+    createdOn: "",
+  },
+  {
+    image: "/gallery27.jpg",
+    title: "",
+    createdOn: "",
+  },
+  {
+    image: "/gallery28.jpg",
+    title: "",
+    createdOn: "",
+  },
+  {
+    image: "/gallery29.jpg",
     title: "",
     createdOn: "",
   },
