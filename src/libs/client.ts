@@ -33,7 +33,7 @@ export const client = createClient({
 // ブログ一覧を取得
 export const getList = async (queries?: MicroCMSQueries) => {
   const listData = await client.getList<Blog>({
-    endpoint: "blogs",
+    endpoint: "blogs?limit=100",
     queries,
   });
 
