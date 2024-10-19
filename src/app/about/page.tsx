@@ -68,7 +68,11 @@ const AboutPage = () => {
                   <Td>学部3年</Td>
                 </Tr>
                 <Tr>
-                  <Td>研究室</Td>
+                  <Td>
+                    <Text as="span" fontWeight="bold">
+                      研究室
+                    </Text>
+                  </Td>
                   <Td>程 同軍研究室(教育支援システムの開発)</Td>
                 </Tr>
                 <Tr>
@@ -259,27 +263,51 @@ const AboutPage = () => {
           <Table mb={8}>
             <Tbody>
               <Tr>
-                <Td>名前</Td>
+                <Td>
+                  <Text as="span" fontWeight="bold">
+                    名前
+                  </Text>
+                </Td>
                 <Td>相良 陸斗</Td>
               </Tr>
               <Tr>
-                <Td>生年月日</Td>
+                <Td>
+                  <Text as="span" fontWeight="bold">
+                    生年月日
+                  </Text>
+                </Td>
                 <Td>2003/09/30</Td>
               </Tr>
               <Tr>
-                <Td>所属</Td>
+                <Td>
+                  <Text as="span" fontWeight="bold">
+                    所属
+                  </Text>
+                </Td>
                 <Td>会津大学 コンピュータ理工学科</Td>
               </Tr>
               <Tr>
-                <Td>学年</Td>
+                <Td>
+                  <Text as="span" fontWeight="bold">
+                    学年
+                  </Text>
+                </Td>
                 <Td>学部3年</Td>
               </Tr>
               <Tr>
-                <Td>研究室</Td>
+                <Td>
+                  <Text as="span" fontWeight="bold">
+                    研究室
+                  </Text>
+                </Td>
                 <Td>程 同軍研究室(教育支援システムの開発)</Td>
               </Tr>
               <Tr>
-                <Td>バイト</Td>
+                <Td>
+                  <Text as="span" fontWeight="bold">
+                    バイト
+                  </Text>
+                </Td>
                 <Td>
                   <Flex align="center">
                     <Link href="https://plise.co.jp" isExternal>
@@ -289,11 +317,19 @@ const AboutPage = () => {
                 </Td>
               </Tr>
               <Tr>
-                <Td>出身</Td>
+                <Td>
+                  <Text as="span" fontWeight="bold">
+                    出身
+                  </Text>
+                </Td>
                 <Td>福島県 喜多方市</Td>
               </Tr>
               <Tr>
-                <Td>HN</Td>
+                <Td>
+                  <Text as="span" fontWeight="bold">
+                    HN
+                  </Text>
+                </Td>
                 <Td>neco / ocen</Td>
               </Tr>
             </Tbody>
