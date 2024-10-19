@@ -72,6 +72,10 @@ const AboutPage = () => {
                   <Td>学部3年</Td>
                 </Tr>
                 <Tr>
+                  <Td>研究室</Td>
+                  <Td>程 同軍研究室(教育支援システムの開発)</Td>
+                </Tr>
+                <Tr>
                   <Td>
                     <Text as="span" fontWeight="bold">
                       バイト
@@ -131,12 +135,11 @@ const AboutPage = () => {
                       </Text>
                     </Td>
                     <Td>
-                      <Text className="profile-details-text">惰眠</Text>
                       <Text className="profile-details-text">食事</Text>
                       <Text className="profile-details-text">
                         予定を決めない散歩・旅行
                       </Text>
-                      <Text className="profile-details-text">ノベルゲーム</Text>
+                      <Text className="profile-details-text">謎解き</Text>
                     </Td>
                   </Tr>
                   <Tr>
@@ -154,7 +157,7 @@ const AboutPage = () => {
                     </Td>
                     <Td>
                       <Text className="profile-details-text">
-                        フロントエンド開発
+                        Webフロントエンド開発
                       </Text>
                       <Text className="profile-details-text">デザイン</Text>
                     </Td>
@@ -186,7 +189,7 @@ const AboutPage = () => {
                         </Text>
                       </Text>
                     </Td>
-                    <Td>React Next.js13</Td>
+                    <Td>Next.js13(React)</Td>
                   </Tr>
                   <Tr>
                     <Td>
@@ -236,7 +239,7 @@ const AboutPage = () => {
                         </Text>
                       </Text>
                     </Td>
-                    <Td>Netlify</Td>
+                    <Td>Vercel</Td>
                   </Tr>
                 </Tbody>
               </Table>
