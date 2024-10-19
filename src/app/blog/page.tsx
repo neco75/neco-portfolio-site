@@ -15,7 +15,7 @@ export default async function StaticPage() {
       </Heading>
       <Grid
         templateColumns={{
-          base: "repeat(auto-fit, minmax(300px, 1fr))",
+          base: "repeat(auto-fit, minmax(250px, 1fr))",
           md: "repeat(2, 1fr)",
           lg: "repeat(3, 1fr)",
           xl: "repeat(4, 1fr)",
