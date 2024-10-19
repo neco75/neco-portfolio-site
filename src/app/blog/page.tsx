@@ -83,6 +83,11 @@ export default async function StaticPage() {
                 >
                   {new Date(post.createdAt).toLocaleString("ja-JP", {
                     timeZone: "Asia/Tokyo",
+                    year: "numeric",
+                    month: "2-digit",
+                    day: "2-digit",
+                    hour: "2-digit",
+                    minute: "2-digit",
                   })}
                 </Text>
               </Link>
