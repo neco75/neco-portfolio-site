@@ -8,15 +8,11 @@ import {
   Image,
   Link,
   Table,
-  Thead,
   Tbody,
   Tr,
-  Th,
   Td,
   useBreakpointValue,
-  Center,
 } from "@chakra-ui/react";
-import { FaExternalLinkAlt } from "react-icons/fa";
 import "./_style.css";
 
 const AboutPage = () => {

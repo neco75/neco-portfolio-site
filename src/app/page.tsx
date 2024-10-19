@@ -9,7 +9,6 @@ import {
   Fade,
   Center,
   VStack,
-  Spinner,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { images, texts } from "./_script";
