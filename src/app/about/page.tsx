@@ -65,7 +65,7 @@ const AboutPage = () => {
                       学年
                     </Text>
                   </Td>
-                  <Td>学部3年</Td>
+                  <Td>学部4年</Td>
                 </Tr>
                 <Tr>
                   <Td>
@@ -292,7 +292,7 @@ const AboutPage = () => {
                     学年
                   </Text>
                 </Td>
-                <Td>学部3年</Td>
+                <Td>学部4年</Td>
               </Tr>
               <Tr>
                 <Td>
